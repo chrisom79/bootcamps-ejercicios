@@ -9,7 +9,6 @@ public class MultidimensionalImpl implements Multidimensional {
         for (int i=0; i<datos.length;i++){
             for (int j=0; j<datos[i].length; j++){
                 if (dato.equals(datos[i][j])){
-
                     return new Posicion(i,j);
                 }
             }
