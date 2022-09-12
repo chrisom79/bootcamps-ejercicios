@@ -2,31 +2,25 @@ package com.oracle.arrays.impl;
 
 import com.oracle.arrays.Unidimensional;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+
 public class UnidimensionalImpl implements Unidimensional {
     @Override
     public void ordenamiento(int[] arr) {
-        for (int i = 0; i <arr.length; i++) {
-            for (int j = i+1; j <arr.length; j++) {
-                if(arr[i] > arr[j]) {      //swap elements if not in order
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
+        Arrays.sort(arr);
     }
 
     @Override
     public int[] ordenamientoReversa(int[] arr) {
-        for (int i = 0; i <arr.length; i++) {
-            for (int j = i+1; j <arr.length; j++) {
-                if(arr[i] < arr[j]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
+        Integer[] tmp = Arrays.stream( arr ).boxed().toArray( Integer[]::new );
+        Arrays.sort(tmp,Comparator.reverseOrder());
+        int [] new_arr = new int [tmp.length];
+        for(int ctr = 0; ctr < tmp.length; ctr++) {
+            new_arr[ctr] = tmp[ctr].intValue(); // returns int value
         }
-        return arr;
+        return new_arr;
     }
 }
