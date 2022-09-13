@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.oracle.arrays.UnidimensionalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-13T18:10:15" hostname="LAPTOP-54J4I5KP" time="0.033">
+<testsuite name="com.oracle.arrays.UnidimensionalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-13T19:45:14" hostname="LAPTOP-54J4I5KP" time="0.002">
   <properties/>
-  <testcase name="ordenamientoTest()" classname="com.oracle.arrays.UnidimensionalTest" time="0.033"/>
+  <testcase name="ordenamientoTest()" classname="com.oracle.arrays.UnidimensionalTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
