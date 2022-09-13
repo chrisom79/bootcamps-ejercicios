@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.oracle.arrays.MultidimensionalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-07T03:57:32" hostname="ogomezch-mac" time="0.042">
+<testsuite name="com.oracle.arrays.MultidimensionalTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-09-13T21:07:32" hostname="LAPTOP-C0699EUV" time="0.029">
   <properties/>
-  <testcase name="getDatoTest()" classname="com.oracle.arrays.MultidimensionalTest" time="0.042"/>
+  <testcase name="getDataTest()" classname="com.oracle.arrays.MultidimensionalTest" time="0.026"/>
+  <testcase name="getPositionTest()" classname="com.oracle.arrays.MultidimensionalTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
