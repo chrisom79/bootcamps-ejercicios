@@ -51,7 +51,12 @@ public class DinamicArrayListImpl implements DynamicArrayList {
 
     @Override
     public void get(int index) {
-
+        if (arr == null || index < 0 || index >= arr.length) {
+            System.out.println("Index out of bound");
+            
+        }else {
+            System.out.printf("Element in index %d is: %d",index,arr[index]);
+        }
     }
 
     @Override
