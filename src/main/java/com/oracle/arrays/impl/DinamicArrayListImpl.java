@@ -32,7 +32,21 @@ public class DinamicArrayListImpl implements DynamicArrayList {
 
     @Override
     public void remove(int index) {
-        
+         if (arr == null || index < 0 || index > arr.length) {
+            System.out.println("Invalid array or index.");
+        } else {
+            if (index == arr.length) {
+                temp = new int[arr.length - 1];
+            } else {
+                arr[index] = arr[arr.length - 1];
+                temp = new int[arr.length - 1];
+            }
+            for (int i = 0; i < arr.length-1; i++) {
+                temp[i] = arr[i];
+            }
+            arr = temp;
+            current--;
+        }
     }
 
     @Override
@@ -42,12 +56,12 @@ public class DinamicArrayListImpl implements DynamicArrayList {
 
     @Override
     public void resize() {
-        int temp[] = new int[2 * capacity];
+        capacity = arr.length + 2;
+        temp = new int[capacity];
 
-        for (int i = 0; i < capacity; i++) {
+        for (int i = 0; i < arr.length; i++) {
             temp[i] = arr[i];
         }
-        capacity *= 2;
         arr = temp;
     }
 }
