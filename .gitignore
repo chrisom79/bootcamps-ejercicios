@@ -1,0 +1,7 @@
+*.lock
+*.class
+*.bin
+.idea/**
+.gradle/**
+build/
+
