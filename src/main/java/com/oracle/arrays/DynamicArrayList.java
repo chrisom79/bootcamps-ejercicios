@@ -1,9 +1,10 @@
 package com.oracle.arrays;
 
 public interface DynamicArrayList {
-    int size = 0;
     void insert(int element);
     void remove(int index);
-    void get(int index);
+    int get(int index);
     void resize();
+    void resize(int newSize);
+    int length();
 }
