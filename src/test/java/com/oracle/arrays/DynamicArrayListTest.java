@@ -15,7 +15,7 @@ public class DynamicArrayListTest {
         arrayList.insert(4);
         arrayList.insert(5);
 
-        assertEquals(3, arrayList.get(2));
+        assertEquals(3, arrayList.get(2));        
         arrayList.insert(6);
         arrayList.insert(7);
         arrayList.insert(8);
@@ -35,7 +35,7 @@ public class DynamicArrayListTest {
         arrayList.insert(4);
         arrayList.insert(5);
         arrayList.remove(4);
-
+   
         assertEquals(5, arrayList.get(4));
         assertEquals(4, arrayList.length());
 
