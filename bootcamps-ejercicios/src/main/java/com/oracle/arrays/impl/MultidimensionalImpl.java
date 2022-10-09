@@ -4,9 +4,8 @@ import com.oracle.arrays.Multidimensional;
 import com.oracle.arrays.model.Posicion;
 
 public class MultidimensionalImpl implements Multidimensional {
-    Posicion position;
 
-     @Override
+    @Override
     public Posicion getPosition(String[][] datos, String dato) {
         
         for (int i = 0; i < datos.length; i++) {
@@ -24,5 +23,4 @@ public class MultidimensionalImpl implements Multidimensional {
         
         return datos[posicion.getX()][posicion.getY()];
     }
-
 }
