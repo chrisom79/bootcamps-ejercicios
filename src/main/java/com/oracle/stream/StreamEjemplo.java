@@ -1,24 +1,40 @@
 package com.oracle.stream;
 
+import java.text.Format;
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Currency;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 public class StreamEjemplo {
-    public static void main(String[] args) {
-
-        List<Person> personList = new ArrayList<Person>();
+    public static void main(String[] args) {    
+        List<Person> personList = new ArrayList<Person>();          
         personList.add(new Person("Tom", 8900, 23, "male", "New York"));
         personList.add(new Person("Jack", 7000, 25, "male", "Washington"));
         personList.add(new Person("Lily", 7800, 21, "female", "Washington"));
         personList.add(new Person("Anni", 8200, 24, "female", "New York"));
         personList.add(new Person("Owen", 9500, 25, "male", "New York"));
         personList.add(new Person("Alisa", 7900, 26, "female", "New York"));
-
+        /*
+            Segun yo no se puede crear nuevos elementos en el map, ya que es una tranformación de los elementos de la lista existente
+        */
         // Crear una nueva persona y agregarla a la lista
-        List<Person> personList2 = personList.stream().map().collect(Collectors.toList());
+        // Person nPerson = new Person("Alan", 10000, 23, "male", "Abasoliwood");
+        //List<Person> personList2 = personList.stream().map( p -> p).collect(Collectors.toList());
+
         // Convertir km a millas
-        List<Person> personList3 = personList2.stream().map().collect(Collectors.toList());
+         List<Person> personList3 = personList.stream().map(p -> {
+            p.setKmPerYear( (int)(p.getKmPerYear() *  0.621371));
+            return p;
+        }).collect(Collectors.toList());
+        for (Person person : personList3) {
+            System.out.println(person.getKmPerYear());
+        }
     }
 }
 
@@ -36,4 +52,45 @@ class Person {
         this.genre = genre;
         this.city = city;
     }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getKmPerYear() {
+        return this.kmPerYear;
+    }
+
+    public void setKmPerYear(int kmPerYear) {
+        this.kmPerYear = kmPerYear;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getGenre() {
+        return this.genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getCity() {
+        return this.city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
 }
