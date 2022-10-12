@@ -16,9 +16,9 @@ public class StreamEjemplo {
         personList.add(new Person("Alisa", 7900, 26, "female", "New York"));
 
         // Crear una nueva persona y agregarla a la lista
-        List<Person> personList2 = personList.stream().map().collect(Collectors.toList());
+        //List<Person> personList2 = personList.stream().map().collect(Collectors.toList());
         // Convertir km a millas
-        List<Person> personList3 = personList2.stream().map().collect(Collectors.toList());
+        List<Person> personList3 = personList.stream().map(person -> {person.setKmPerYear((int)(person.getKmPerYear()*0.621371)); return person;}).peek(person -> System.out.println(person.getKmPerYear())).collect(Collectors.toList());
     }
 }
 
@@ -28,6 +28,14 @@ class Person {
     private int age;
     private String genre;
     private String city;
+
+    public int getKmPerYear() {
+        return kmPerYear;
+    }
+
+    public void setKmPerYear(int kmPerYear) {
+        this.kmPerYear = kmPerYear;
+    }
 
     public Person(String name, int kmPerYear, int age, String genre, String city) {
         this.name = name;
