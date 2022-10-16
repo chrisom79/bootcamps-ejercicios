@@ -143,6 +143,7 @@ public class InMemoryWorldDao implements WorldDao {
         cities.put(127, new City(127, "Gjumri", "ARM", 211700));
         cities.put(128, new City(128, "Vanadzor", "ARM", 172700));
         cities.put(129, new City(129, "Oranjestad", "ABW", 29034));
+
         cities.put(130, new City(130, "Sydney", "AUS", 3276207));
         cities.put(131, new City(131, "Melbourne", "AUS", 2865329));
         cities.put(132, new City(132, "Brisbane", "AUS", 1291117));
@@ -157,6 +158,7 @@ public class InMemoryWorldDao implements WorldDao {
         cities.put(141, new City(141, "Geelong", "AUS", 125382));
         cities.put(142, new City(142, "Townsville", "AUS", 109914));
         cities.put(143, new City(143, "Cairns", "AUS", 92273));
+        
         cities.put(144, new City(144, "Baku", "AZE", 1787800));
         cities.put(145, new City(145, "Gâ€žncâ€ž", "AZE", 299300));
         cities.put(146, new City(146, "Sumqayit", "AZE", 283000));
