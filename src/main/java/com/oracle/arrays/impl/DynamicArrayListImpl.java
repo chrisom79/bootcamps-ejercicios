@@ -22,30 +22,46 @@ public class DynamicArrayListImpl implements DynamicArrayList {
         }
 
         arr[idx] = element;
+        idx++;
     }
 
     @Override
     public void remove(int index) {
-
+        int[] newArr = new int[arr.length];
+        System.arraycopy(arr, 0, newArr, 0, index);
+        System.arraycopy(arr, index + 1,
+                newArr, index, arr.length - index - 1);
+        arr = newArr;
+        idx--;
     }
 
     @Override
     public int get(int index) {
-        return 0;
+        return arr[index];
     }
 
     @Override
     public void resize() {
-
+        if (arr.length == size) {
+            size = size * 2;
+            int[] newArr = new int[size];
+            System.arraycopy(arr, 0, newArr, 0, arr.length);
+            arr = newArr;
+        }
     }
 
     @Override
     public void resize(int newSize) {
-
+        if (arr.length <= newSize) {
+            size = newSize;
+            int[] newArr = new int[size];
+            System.arraycopy(arr, 0, newArr, 0, size);
+            arr = newArr;
+        }
     }
 
     @Override
     public int length() {
-        return 0;
+        return idx;
     }
 }

@@ -1,6 +1,5 @@
 package com.oracle.arrays;
 
-import com.oracle.arrays.Unidimensional;
 import com.oracle.arrays.impl.UnidimensionalImpl;
 import org.junit.jupiter.api.Test;
 

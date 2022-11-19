@@ -16,9 +16,9 @@ public class StreamEjemplo {
         personList.add(new Person("Alisa", 7900, 26, "female", "New York"));
 
         // Crear una nueva persona y agregarla a la lista
-        List<Person> personList2 = personList.stream().map().collect(Collectors.toList());
+        //List<Person> personList2 = personList.stream().map().collect(Collectors.toList());
         // Convertir km a millas
-        List<Person> personList3 = personList2.stream().map().collect(Collectors.toList());
+       // List<Person> personList3 = personList2.stream().map().collect(Collectors.toList());
     }
 }
 
